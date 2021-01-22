@@ -106,6 +106,20 @@ class ManagerViewController: UIViewController, UITableViewDelegate{
 //            }
         }
         return mcpeerid_to_bledevice
+}
+
+extension ManagerViewController: QCPRCompressionDelegate {
+    
+    func compressionUpdated(comp_dep: Int, comp_rate: Int) {
+        
+    print("Compression Delegate Fire")
+    print(service.truMonitorDevices)
+    let jsonPayload = "{​​​​​​​​\"parameters\":[{​​​​​​​​\"type\":\"heartRate\",\"value\":" + String(comp_rate) + ",\"changeTime\":0}​​​​​​​​],\"waveforms\":[],\"customParameters\":[],\"visibilities\":[]}​​​​​​​​"
+
+    let controlRequest = ControlRequest(route: "vitals", rootPayload: jsonPayload)
+
+    service.sendDataToTruMonitor(request: controlRequest, peers: service.truMonitorDevices)
+        
     }
 //    public func refreshDevicesListState() {
 //        deviceView?.update(searching: bleCore.isScanning(), bluetoothOn: bleCore.bluetoothOn())

@@ -40,6 +40,45 @@ class HostService: NSObject {
     }
     
     
+    func sendDataToTruMonitor(request: ControlRequest, peers: [MCPeerID]) {
+
+         
+
+         guard let data = controlRequestData(request: request) else { return }
+        
+         if peers.count == 0 { return }
+         do {
+            print("About to send")
+             try self.session.send(data, toPeers: peers, with: .reliable)
+         } catch let error {
+             print("%@", "Error for sending: \(error)")
+         }
+     }
+
+     
+
+     private func controlRequestData(request: ControlRequest) -> Data? {
+
+         let jsonEncoder = JSONEncoder()
+         var jsonData: Data?
+
+         do {
+            jsonData = try jsonEncoder.encode(request)
+            let jsonString = String(data: jsonData!, encoding: .utf8)
+            print("JSON String : " + jsonString!)
+        }
+        catch {
+            print(error.localizedDescription)
+        }
+
+        guard let data = jsonData else {
+            print("Attempted to send empty data set")
+            return nil
+        }
+
+         return data
+     }
+    
 }
 
 
