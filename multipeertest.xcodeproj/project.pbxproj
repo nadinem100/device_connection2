@@ -128,6 +128,7 @@
 				795AC93825B6D68600DB3B6F /* Assets.xcassets */,
 				795AC93A25B6D68600DB3B6F /* LaunchScreen.storyboard */,
 				795AC93D25B6D68600DB3B6F /* Info.plist */,
+				F66F96B225BB587B00727DCF /* multipeertest-Bridging-Header.h */,
 			);
 			path = multipeertest;
 			sourceTree = "<group>";
@@ -192,6 +193,7 @@
 				TargetAttributes = {
 					795AC92B25B6D68500DB3B6F = {
 						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1230;
 					};
 				};
 			};
@@ -221,7 +223,9 @@
 				795AC93C25B6D68600DB3B6F /* LaunchScreen.storyboard in Resources */,
 				EB482D0625BA795A009120A2 /* QCPRDeviceView.storyboard in Resources */,
 				795AC93925B6D68600DB3B6F /* Assets.xcassets in Resources */,
+				F66F96BB25BB589300727DCF /* Radio button off.png in Resources */,
 				795AC93725B6D68500DB3B6F /* Main.storyboard in Resources */,
+				F66F96B825BB588700727DCF /* Radio button on.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,15 +402,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NHQZWGSFUF;
+				DEVELOPMENT_TEAM = T2WFDGU5F7;
 				INFOPLIST_FILE = multipeertest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.nmeister.HeartRateMonitor;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andrew.HeartRateMonitor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "multipeertest/multipeertest-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -417,15 +424,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NHQZWGSFUF;
+				DEVELOPMENT_TEAM = T2WFDGU5F7;
 				INFOPLIST_FILE = multipeertest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.nmeister.HeartRateMonitor;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andrew.HeartRateMonitor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "multipeertest/multipeertest-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

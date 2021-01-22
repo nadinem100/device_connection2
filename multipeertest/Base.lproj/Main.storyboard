@@ -199,7 +199,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Rb-Fa-4uQ">
-                                <rect key="frame" x="162.96195413455507" y="357.99999999999977" width="88.000000000000398" height="48.000000000000909"/>
+                                <rect key="frame" x="163" y="104" width="88.000000000000398" height="48.000000000000909"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="Signal">
@@ -209,6 +209,124 @@
                                     <action selector="signal:" destination="zhk-kn-vf5" eventType="touchUpInside" id="0Hc-fm-FUo"/>
                                 </connections>
                             </button>
+                            <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M28-4C-PFl">
+                                <rect key="frame" x="20" y="188" width="374" height="293"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Maintenance Fluids" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x8k-lQ-QQu">
+                                        <rect key="frame" x="8" y="8" width="366" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="50H-8b-O9L" customClass="DLRadioButton">
+                                        <rect key="frame" x="8" y="45" width="358" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="Colloids">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="Radio button off.png"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="Radio button on.png"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="marginWidth">
+                                                <real key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outletCollection property="otherButtons" destination="CgU-M8-Jin" id="g2S-3S-HiK"/>
+                                            <outletCollection property="otherButtons" destination="aTE-Ki-YyB" id="SRt-UQ-UII"/>
+                                            <outletCollection property="otherButtons" destination="gKo-hT-YBx" id="dF8-Td-iUY"/>
+                                            <outletCollection property="otherButtons" destination="ctw-Xd-O0X" id="8Oz-69-QN7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CgU-M8-Jin" customClass="DLRadioButton">
+                                        <rect key="frame" x="8" y="94" width="366" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="Crystalloids">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="Radio button off.png"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="Radio button on.png"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="marginWidth">
+                                                <real key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outletCollection property="otherButtons" destination="50H-8b-O9L" id="yvh-c6-9Sq"/>
+                                            <outletCollection property="otherButtons" destination="aTE-Ki-YyB" id="WXz-fb-2Ih"/>
+                                            <outletCollection property="otherButtons" destination="gKo-hT-YBx" id="b27-7e-UUR"/>
+                                            <outletCollection property="otherButtons" destination="ctw-Xd-O0X" id="2f4-cB-cm2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aTE-Ki-YyB" customClass="DLRadioButton">
+                                        <rect key="frame" x="8" y="143" width="366" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="Hartmann">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="Radio button off.png"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="Radio button on.png"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="marginWidth">
+                                                <real key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outletCollection property="otherButtons" destination="50H-8b-O9L" id="YZX-DV-bpU"/>
+                                            <outletCollection property="otherButtons" destination="CgU-M8-Jin" id="Qou-2A-5Tv"/>
+                                            <outletCollection property="otherButtons" destination="gKo-hT-YBx" id="94z-MY-noq"/>
+                                            <outletCollection property="otherButtons" destination="ctw-Xd-O0X" id="pRg-KS-NY4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gKo-hT-YBx" customClass="DLRadioButton">
+                                        <rect key="frame" x="8" y="192" width="366" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="Ringer's Lactate">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="Radio button off.png"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="Radio button on.png"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="marginWidth">
+                                                <real key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outletCollection property="otherButtons" destination="50H-8b-O9L" id="GDh-sS-oie"/>
+                                            <outletCollection property="otherButtons" destination="CgU-M8-Jin" id="PaZ-al-RBV"/>
+                                            <outletCollection property="otherButtons" destination="aTE-Ki-YyB" id="n5c-vT-PYT"/>
+                                            <outletCollection property="otherButtons" destination="ctw-Xd-O0X" id="p4z-bP-S7i"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ctw-Xd-O0X" customClass="DLRadioButton">
+                                        <rect key="frame" x="8" y="241" width="366" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="Saline">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="Radio button off.png"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="Radio button on.png"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="marginWidth">
+                                                <real key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outletCollection property="otherButtons" destination="50H-8b-O9L" id="Qx5-vj-1XY"/>
+                                            <outletCollection property="otherButtons" destination="CgU-M8-Jin" id="oYC-Ld-Pnq"/>
+                                            <outletCollection property="otherButtons" destination="aTE-Ki-YyB" id="AXf-fV-Xur"/>
+                                            <outletCollection property="otherButtons" destination="gKo-hT-YBx" id="Yfb-Xk-2Sl"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="F0w-hE-X98"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -217,7 +335,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cej-3W-S2G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4645" y="-283"/>
+            <point key="canvasLocation" x="4643.4782608695659" y="-283.25892857142856"/>
         </scene>
         <!--Steth View Controller-->
         <scene sceneID="m4z-vS-qIi">
@@ -413,6 +531,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Radio button off.png" width="21" height="20"/>
+        <image name="Radio button on.png" width="20" height="20"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
