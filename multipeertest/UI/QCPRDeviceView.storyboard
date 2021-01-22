@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--iOS Devices Nearby-->
+        <scene sceneID="ozc-Wy-XwY">
+            <objects>
+                <viewController storyboardIdentifier="QCPRDeviceView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jhb-cf-jUb" customClass="QCPRDeviceView" customModule="multipeertest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LJi-c9-QaU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QDv-3O-IDT">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="jhb-cf-jUb" id="SDS-Na-mxd"/>
+                                    <outlet property="delegate" destination="jhb-cf-jUb" id="opD-5j-Pmu"/>
+                                </connections>
+                            </tableView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pencil" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="5RY-g0-M9V">
+                                <rect key="frame" x="175" y="418.5" width="64" height="59.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="57w-TD-O3v"/>
+                                    <constraint firstAttribute="width" constant="64" id="cF6-dH-I8c"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gGf-R3-n3C"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QDv-3O-IDT" firstAttribute="leading" secondItem="gGf-R3-n3C" secondAttribute="leading" id="5jv-4L-8oz"/>
+                            <constraint firstItem="5RY-g0-M9V" firstAttribute="centerX" secondItem="LJi-c9-QaU" secondAttribute="centerX" id="ILD-P7-Vf8"/>
+                            <constraint firstItem="5RY-g0-M9V" firstAttribute="centerY" secondItem="LJi-c9-QaU" secondAttribute="centerY" id="P1u-8H-4c0"/>
+                            <constraint firstItem="QDv-3O-IDT" firstAttribute="trailing" secondItem="gGf-R3-n3C" secondAttribute="trailing" id="VnU-0M-k2R"/>
+                            <constraint firstItem="QDv-3O-IDT" firstAttribute="top" secondItem="gGf-R3-n3C" secondAttribute="top" id="e3c-9R-LTy"/>
+                            <constraint firstAttribute="bottom" secondItem="QDv-3O-IDT" secondAttribute="bottom" id="gAt-R2-X0D"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="iOS Devices Nearby" id="FE8-mb-xmD">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="1zg-j7-NnC">
+                            <connections>
+                                <action selector="didSelectDismiss" destination="jhb-cf-jUb" id="18S-6B-HBO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="bluetoothOffView" destination="5RY-g0-M9V" id="7DG-Px-JHb"/>
+                        <outlet property="tableView" destination="QDv-3O-IDT" id="fZQ-zF-L2x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AVd-uZ-9t2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1998.5507246376812" y="-262.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pencil" catalog="system" width="128" height="113"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
