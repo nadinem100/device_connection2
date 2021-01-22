@@ -29,6 +29,8 @@
 		F66F96B525BB587C00727DCF /* DLRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F66F96B325BB587C00727DCF /* DLRadioButton.m */; };
 		F66F96B825BB588700727DCF /* Radio button on.png in Resources */ = {isa = PBXBuildFile; fileRef = F66F96B725BB588700727DCF /* Radio button on.png */; };
 		F66F96BB25BB589300727DCF /* Radio button off.png in Resources */ = {isa = PBXBuildFile; fileRef = F66F96BA25BB589300727DCF /* Radio button off.png */; };
+		F66F96C025BB6D5D00727DCF /* Auto base shape.png in Resources */ = {isa = PBXBuildFile; fileRef = F66F96BE25BB6D5D00727DCF /* Auto base shape.png */; };
+		F66F96C125BB6D5D00727DCF /* 30 Focus.png in Resources */ = {isa = PBXBuildFile; fileRef = F66F96BF25BB6D5D00727DCF /* 30 Focus.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,8 @@
 		F66F96B425BB587C00727DCF /* DLRadioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLRadioButton.h; sourceTree = "<group>"; };
 		F66F96B725BB588700727DCF /* Radio button on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Radio button on.png"; sourceTree = "<group>"; };
 		F66F96BA25BB589300727DCF /* Radio button off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Radio button off.png"; sourceTree = "<group>"; };
+		F66F96BE25BB6D5D00727DCF /* Auto base shape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Auto base shape.png"; sourceTree = "<group>"; };
+		F66F96BF25BB6D5D00727DCF /* 30 Focus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "30 Focus.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +149,8 @@
 		F66F96B125BB586800727DCF /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F66F96BF25BB6D5D00727DCF /* 30 Focus.png */,
+				F66F96BE25BB6D5D00727DCF /* Auto base shape.png */,
 				F66F96B725BB588700727DCF /* Radio button on.png */,
 				F66F96BA25BB589300727DCF /* Radio button off.png */,
 			);
@@ -211,9 +217,11 @@
 			files = (
 				795AC93C25B6D68600DB3B6F /* LaunchScreen.storyboard in Resources */,
 				EB482D0625BA795A009120A2 /* QCPRDeviceView.storyboard in Resources */,
+				F66F96C125BB6D5D00727DCF /* 30 Focus.png in Resources */,
 				795AC93925B6D68600DB3B6F /* Assets.xcassets in Resources */,
 				F66F96BB25BB589300727DCF /* Radio button off.png in Resources */,
 				795AC93725B6D68500DB3B6F /* Main.storyboard in Resources */,
+				F66F96C025BB6D5D00727DCF /* Auto base shape.png in Resources */,
 				F66F96B825BB588700727DCF /* Radio button on.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

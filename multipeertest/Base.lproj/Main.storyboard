@@ -156,7 +156,7 @@
             </objects>
             <point key="canvasLocation" x="2203" y="402"/>
         </scene>
-        <!--View Controller-->
+        <!--Drugs and Fluids-->
         <scene sceneID="utu-It-8ze">
             <objects>
                 <viewController id="zhk-kn-vf5" customClass="DFViewController" customModule="multipeertest" customModuleProvider="target" sceneMemberID="viewController">
@@ -165,7 +165,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Rb-Fa-4uQ">
-                                <rect key="frame" x="163" y="104" width="88.000000000000398" height="48.000000000000909"/>
+                                <rect key="frame" x="20" y="140" width="88.000000000000398" height="48.000000000000909"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="Signal">
@@ -201,6 +201,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <action selector="colloidSelect:" destination="zhk-kn-vf5" eventType="touchUpInside" id="Pmq-ZR-yJm"/>
                                             <outletCollection property="otherButtons" destination="CgU-M8-Jin" id="g2S-3S-HiK"/>
                                             <outletCollection property="otherButtons" destination="aTE-Ki-YyB" id="SRt-UQ-UII"/>
                                             <outletCollection property="otherButtons" destination="gKo-hT-YBx" id="dF8-Td-iUY"/>
@@ -222,6 +223,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <action selector="crystalSelect:" destination="zhk-kn-vf5" eventType="touchUpInside" id="PIY-AZ-RBh"/>
                                             <outletCollection property="otherButtons" destination="50H-8b-O9L" id="yvh-c6-9Sq"/>
                                             <outletCollection property="otherButtons" destination="aTE-Ki-YyB" id="WXz-fb-2Ih"/>
                                             <outletCollection property="otherButtons" destination="gKo-hT-YBx" id="b27-7e-UUR"/>
@@ -243,6 +245,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <action selector="hartmannSelect:" destination="zhk-kn-vf5" eventType="touchUpInside" id="RAJ-5u-eNy"/>
                                             <outletCollection property="otherButtons" destination="50H-8b-O9L" id="YZX-DV-bpU"/>
                                             <outletCollection property="otherButtons" destination="CgU-M8-Jin" id="Qou-2A-5Tv"/>
                                             <outletCollection property="otherButtons" destination="gKo-hT-YBx" id="94z-MY-noq"/>
@@ -264,6 +267,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <action selector="ringerSelect:" destination="zhk-kn-vf5" eventType="touchUpInside" id="o0U-oN-VN0"/>
                                             <outletCollection property="otherButtons" destination="50H-8b-O9L" id="GDh-sS-oie"/>
                                             <outletCollection property="otherButtons" destination="CgU-M8-Jin" id="PaZ-al-RBV"/>
                                             <outletCollection property="otherButtons" destination="aTE-Ki-YyB" id="n5c-vT-PYT"/>
@@ -285,6 +289,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <action selector="salineSelect:" destination="zhk-kn-vf5" eventType="touchUpInside" id="uuI-k4-pSe"/>
                                             <outletCollection property="otherButtons" destination="50H-8b-O9L" id="Qx5-vj-1XY"/>
                                             <outletCollection property="otherButtons" destination="CgU-M8-Jin" id="oYC-Ld-Pnq"/>
                                             <outletCollection property="otherButtons" destination="aTE-Ki-YyB" id="AXf-fV-Xur"/>
@@ -293,15 +298,43 @@
                                     </button>
                                 </subviews>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r7D-ip-acr">
+                                <rect key="frame" x="264" y="768" width="130" height="54"/>
+                                <state key="normal" title="Button" image="30 Focus.png"/>
+                                <connections>
+                                    <action selector="administerSelect:" destination="zhk-kn-vf5" eventType="touchUpInside" id="9ig-6o-PI8"/>
+                                    <segue destination="oqc-Io-KNn" kind="show" id="nJ4-ya-Ash"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="F0w-hE-X98"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="F0w-hE-X98" firstAttribute="bottom" secondItem="r7D-ip-acr" secondAttribute="bottom" constant="40" id="DgL-cg-ytX"/>
+                            <constraint firstItem="F0w-hE-X98" firstAttribute="trailing" secondItem="r7D-ip-acr" secondAttribute="trailing" constant="20" id="h0a-8w-tn5"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="geH-qh-0jG"/>
+                    <navigationItem key="navigationItem" title="Drugs and Fluids" id="geH-qh-0jG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cej-3W-S2G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4643.4782608695659" y="-283.25892857142856"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="dGl-jH-f6G">
+            <objects>
+                <viewController id="oqc-Io-KNn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BRY-7P-GHc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="cyL-js-Nme"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xWq-Rh-Xyk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3pp-DG-YhR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5458" y="-283"/>
         </scene>
         <!--Steth View Controller-->
         <scene sceneID="m4z-vS-qIi">
@@ -497,10 +530,14 @@
         </scene>
     </scenes>
     <resources>
+        <image name="30 Focus.png" width="128" height="54"/>
         <image name="Radio button off.png" width="21" height="20"/>
         <image name="Radio button on.png" width="20" height="20"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
