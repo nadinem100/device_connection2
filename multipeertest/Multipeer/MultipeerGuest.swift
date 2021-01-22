@@ -101,21 +101,9 @@ extension AdvertisingService: MCSessionDelegate {
 
     
     func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
-
         
-
         print("Recieved Data")
-
-        if data[0] == 1 {
-
-            print("recieved command to disconnect")
-
-            session.disconnect()
-
-        }
-
         
-
     }
     
     func session(_ session: MCSession, didReceive stream: InputStream, withName streamName: String, fromPeer peerID: MCPeerID) {
