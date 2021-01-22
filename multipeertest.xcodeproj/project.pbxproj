@@ -26,6 +26,11 @@
 		795AC94625B6D6B000DB3B6F /* MultipeerDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795AC94525B6D6B000DB3B6F /* MultipeerDataService.swift */; };
 		EB482D0625BA795A009120A2 /* QCPRDeviceView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB482D0525BA795A009120A2 /* QCPRDeviceView.storyboard */; };
 		EB482D0925BA7A1E009120A2 /* QCPRDeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB482D0825BA7A1E009120A2 /* QCPRDeviceView.swift */; };
+		EB482D1825BB62FE009120A2 /* QCPRInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB482D1725BB62FE009120A2 /* QCPRInterface.swift */; };
+		EB482D1B25BB6308009120A2 /* BLECore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB482D1A25BB6308009120A2 /* BLECore.swift */; };
+		EB482D1E25BB6436009120A2 /* BLEDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB482D1D25BB6436009120A2 /* BLEDefinitions.swift */; };
+		EB482D2125BB6524009120A2 /* CompressionCompleteEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB482D2025BB6524009120A2 /* CompressionCompleteEvent.swift */; };
+		EB482D2625BB65B2009120A2 /* QCPRServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB482D2525BB65B2009120A2 /* QCPRServices.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +55,11 @@
 		795AC94525B6D6B000DB3B6F /* MultipeerDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipeerDataService.swift; sourceTree = "<group>"; };
 		EB482D0525BA795A009120A2 /* QCPRDeviceView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QCPRDeviceView.storyboard; sourceTree = "<group>"; };
 		EB482D0825BA7A1E009120A2 /* QCPRDeviceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QCPRDeviceView.swift; sourceTree = "<group>"; };
+		EB482D1725BB62FE009120A2 /* QCPRInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QCPRInterface.swift; sourceTree = "<group>"; };
+		EB482D1A25BB6308009120A2 /* BLECore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLECore.swift; sourceTree = "<group>"; };
+		EB482D1D25BB6436009120A2 /* BLEDefinitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEDefinitions.swift; sourceTree = "<group>"; };
+		EB482D2025BB6524009120A2 /* CompressionCompleteEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompressionCompleteEvent.swift; sourceTree = "<group>"; };
+		EB482D2525BB65B2009120A2 /* QCPRServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QCPRServices.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +117,8 @@
 		795AC92E25B6D68500DB3B6F /* multipeertest */ = {
 			isa = PBXGroup;
 			children = (
+				EB482D2325BB652D009120A2 /* Characteristics */,
+				EB482D1625BB62D7009120A2 /* Bluetooth */,
 				12AF040725B9DBB200DEC006 /* UI */,
 				795AC94425B6D68F00DB3B6F /* Multipeer */,
 				795AC92F25B6D68500DB3B6F /* AppDelegate.swift */,
@@ -128,6 +140,25 @@
 				12AC106225BA343800DBB38B /* MultipeerGuest.swift */,
 			);
 			path = Multipeer;
+			sourceTree = "<group>";
+		};
+		EB482D1625BB62D7009120A2 /* Bluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				EB482D1725BB62FE009120A2 /* QCPRInterface.swift */,
+				EB482D1A25BB6308009120A2 /* BLECore.swift */,
+				EB482D1D25BB6436009120A2 /* BLEDefinitions.swift */,
+			);
+			path = Bluetooth;
+			sourceTree = "<group>";
+		};
+		EB482D2325BB652D009120A2 /* Characteristics */ = {
+			isa = PBXGroup;
+			children = (
+				EB482D2525BB65B2009120A2 /* QCPRServices.swift */,
+				EB482D2025BB6524009120A2 /* CompressionCompleteEvent.swift */,
+			);
+			path = Characteristics;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,13 +236,18 @@
 				12AC105B25BA29DC00DBB38B /* MonitorViewController.swift in Sources */,
 				795AC93025B6D68500DB3B6F /* AppDelegate.swift in Sources */,
 				795AC93225B6D68500DB3B6F /* SceneDelegate.swift in Sources */,
+				EB482D1E25BB6436009120A2 /* BLEDefinitions.swift in Sources */,
+				EB482D1B25BB6308009120A2 /* BLECore.swift in Sources */,
 				12AC106325BA343800DBB38B /* MultipeerGuest.swift in Sources */,
+				EB482D1825BB62FE009120A2 /* QCPRInterface.swift in Sources */,
 				12AC105F25BA340000DBB38B /* MultipeerHost.swift in Sources */,
 				795AC94625B6D6B000DB3B6F /* MultipeerDataService.swift in Sources */,
 				12AF040925B9DBD100DEC006 /* MainViewController.swift in Sources */,
 				12AC105825BA29C500DBB38B /* DFViewController.swift in Sources */,
 				12AF040C25B9DC3A00DEC006 /* StethViewController.swift in Sources */,
+				EB482D2125BB6524009120A2 /* CompressionCompleteEvent.swift in Sources */,
 				12AC105225BA299100DBB38B /* BVMViewController.swift in Sources */,
+				EB482D2625BB65B2009120A2 /* QCPRServices.swift in Sources */,
 				12AC105525BA29AB00DBB38B /* BedsideViewController.swift in Sources */,
 				12AF041225B9E2F000DEC006 /* ManagerViewController.swift in Sources */,
 				12AC104F25BA274E00DBB38B /* SimulatorViewController.swift in Sources */,
