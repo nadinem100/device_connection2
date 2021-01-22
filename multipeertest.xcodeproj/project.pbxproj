@@ -26,6 +26,11 @@
 		795AC94625B6D6B000DB3B6F /* MultipeerDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795AC94525B6D6B000DB3B6F /* MultipeerDataService.swift */; };
 		EB482D0625BA795A009120A2 /* QCPRDeviceView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB482D0525BA795A009120A2 /* QCPRDeviceView.storyboard */; };
 		EB482D0925BA7A1E009120A2 /* QCPRDeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB482D0825BA7A1E009120A2 /* QCPRDeviceView.swift */; };
+		F66F96B525BB587C00727DCF /* DLRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F66F96B325BB587C00727DCF /* DLRadioButton.m */; };
+		F66F96B825BB588700727DCF /* Radio button on.png in Resources */ = {isa = PBXBuildFile; fileRef = F66F96B725BB588700727DCF /* Radio button on.png */; };
+		F66F96BB25BB589300727DCF /* Radio button off.png in Resources */ = {isa = PBXBuildFile; fileRef = F66F96BA25BB589300727DCF /* Radio button off.png */; };
+		F66F96C025BB6D5D00727DCF /* Auto base shape.png in Resources */ = {isa = PBXBuildFile; fileRef = F66F96BE25BB6D5D00727DCF /* Auto base shape.png */; };
+		F66F96C125BB6D5D00727DCF /* 30 Focus.png in Resources */ = {isa = PBXBuildFile; fileRef = F66F96BF25BB6D5D00727DCF /* 30 Focus.png */; };
 		EB482D1825BB62FE009120A2 /* QCPRInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB482D1725BB62FE009120A2 /* QCPRInterface.swift */; };
 		EB482D1B25BB6308009120A2 /* BLECore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB482D1A25BB6308009120A2 /* BLECore.swift */; };
 		EB482D1E25BB6436009120A2 /* BLEDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB482D1D25BB6436009120A2 /* BLEDefinitions.swift */; };
@@ -55,6 +60,13 @@
 		795AC94525B6D6B000DB3B6F /* MultipeerDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipeerDataService.swift; sourceTree = "<group>"; };
 		EB482D0525BA795A009120A2 /* QCPRDeviceView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QCPRDeviceView.storyboard; sourceTree = "<group>"; };
 		EB482D0825BA7A1E009120A2 /* QCPRDeviceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QCPRDeviceView.swift; sourceTree = "<group>"; };
+		F66F96B225BB587B00727DCF /* multipeertest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "multipeertest-Bridging-Header.h"; sourceTree = "<group>"; };
+		F66F96B325BB587C00727DCF /* DLRadioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLRadioButton.m; sourceTree = "<group>"; };
+		F66F96B425BB587C00727DCF /* DLRadioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLRadioButton.h; sourceTree = "<group>"; };
+		F66F96B725BB588700727DCF /* Radio button on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Radio button on.png"; sourceTree = "<group>"; };
+		F66F96BA25BB589300727DCF /* Radio button off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Radio button off.png"; sourceTree = "<group>"; };
+		F66F96BE25BB6D5D00727DCF /* Auto base shape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Auto base shape.png"; sourceTree = "<group>"; };
+		F66F96BF25BB6D5D00727DCF /* 30 Focus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "30 Focus.png"; sourceTree = "<group>"; };
 		EB482D1725BB62FE009120A2 /* QCPRInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QCPRInterface.swift; sourceTree = "<group>"; };
 		EB482D1A25BB6308009120A2 /* BLECore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLECore.swift; sourceTree = "<group>"; };
 		EB482D1D25BB6436009120A2 /* BLEDefinitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEDefinitions.swift; sourceTree = "<group>"; };
@@ -145,6 +157,10 @@
 		EB482D1625BB62D7009120A2 /* Bluetooth */ = {
 			isa = PBXGroup;
 			children = (
+				F66F96BF25BB6D5D00727DCF /* 30 Focus.png */,
+				F66F96BE25BB6D5D00727DCF /* Auto base shape.png */,
+				F66F96B725BB588700727DCF /* Radio button on.png */,
+				F66F96BA25BB589300727DCF /* Radio button off.png */,
 				EB482D1725BB62FE009120A2 /* QCPRInterface.swift */,
 				EB482D1A25BB6308009120A2 /* BLECore.swift */,
 				EB482D1D25BB6436009120A2 /* BLEDefinitions.swift */,
@@ -220,8 +236,11 @@
 			files = (
 				795AC93C25B6D68600DB3B6F /* LaunchScreen.storyboard in Resources */,
 				EB482D0625BA795A009120A2 /* QCPRDeviceView.storyboard in Resources */,
+				F66F96C125BB6D5D00727DCF /* 30 Focus.png in Resources */,
 				795AC93925B6D68600DB3B6F /* Assets.xcassets in Resources */,
 				795AC93725B6D68500DB3B6F /* Main.storyboard in Resources */,
+				F66F96C025BB6D5D00727DCF /* Auto base shape.png in Resources */,
+				F66F96B825BB588700727DCF /* Radio button on.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
