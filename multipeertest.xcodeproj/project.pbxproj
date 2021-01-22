@@ -26,19 +26,16 @@
 		795AC94625B6D6B000DB3B6F /* MultipeerDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795AC94525B6D6B000DB3B6F /* MultipeerDataService.swift */; };
 		EB482D0625BA795A009120A2 /* QCPRDeviceView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB482D0525BA795A009120A2 /* QCPRDeviceView.storyboard */; };
 		EB482D0925BA7A1E009120A2 /* QCPRDeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB482D0825BA7A1E009120A2 /* QCPRDeviceView.swift */; };
-<<<<<<< HEAD
 		EB482D1825BB62FE009120A2 /* QCPRInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB482D1725BB62FE009120A2 /* QCPRInterface.swift */; };
 		EB482D1B25BB6308009120A2 /* BLECore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB482D1A25BB6308009120A2 /* BLECore.swift */; };
 		EB482D1E25BB6436009120A2 /* BLEDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB482D1D25BB6436009120A2 /* BLEDefinitions.swift */; };
 		EB482D2125BB6524009120A2 /* CompressionCompleteEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB482D2025BB6524009120A2 /* CompressionCompleteEvent.swift */; };
 		EB482D2625BB65B2009120A2 /* QCPRServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB482D2525BB65B2009120A2 /* QCPRServices.swift */; };
-=======
 		F66F96B525BB587C00727DCF /* DLRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F66F96B325BB587C00727DCF /* DLRadioButton.m */; };
 		F66F96B825BB588700727DCF /* Radio button on.png in Resources */ = {isa = PBXBuildFile; fileRef = F66F96B725BB588700727DCF /* Radio button on.png */; };
 		F66F96BB25BB589300727DCF /* Radio button off.png in Resources */ = {isa = PBXBuildFile; fileRef = F66F96BA25BB589300727DCF /* Radio button off.png */; };
 		F66F96C025BB6D5D00727DCF /* Auto base shape.png in Resources */ = {isa = PBXBuildFile; fileRef = F66F96BE25BB6D5D00727DCF /* Auto base shape.png */; };
 		F66F96C125BB6D5D00727DCF /* 30 Focus.png in Resources */ = {isa = PBXBuildFile; fileRef = F66F96BF25BB6D5D00727DCF /* 30 Focus.png */; };
->>>>>>> parent of 37c6339... Merge branch 'main' into radioButtons
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,13 +60,11 @@
 		795AC94525B6D6B000DB3B6F /* MultipeerDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipeerDataService.swift; sourceTree = "<group>"; };
 		EB482D0525BA795A009120A2 /* QCPRDeviceView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QCPRDeviceView.storyboard; sourceTree = "<group>"; };
 		EB482D0825BA7A1E009120A2 /* QCPRDeviceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QCPRDeviceView.swift; sourceTree = "<group>"; };
-<<<<<<< HEAD
 		EB482D1725BB62FE009120A2 /* QCPRInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QCPRInterface.swift; sourceTree = "<group>"; };
 		EB482D1A25BB6308009120A2 /* BLECore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLECore.swift; sourceTree = "<group>"; };
 		EB482D1D25BB6436009120A2 /* BLEDefinitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEDefinitions.swift; sourceTree = "<group>"; };
 		EB482D2025BB6524009120A2 /* CompressionCompleteEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompressionCompleteEvent.swift; sourceTree = "<group>"; };
 		EB482D2525BB65B2009120A2 /* QCPRServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QCPRServices.swift; sourceTree = "<group>"; };
-=======
 		F66F96B225BB587B00727DCF /* multipeertest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "multipeertest-Bridging-Header.h"; sourceTree = "<group>"; };
 		F66F96B325BB587C00727DCF /* DLRadioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLRadioButton.m; sourceTree = "<group>"; };
 		F66F96B425BB587C00727DCF /* DLRadioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLRadioButton.h; sourceTree = "<group>"; };
@@ -77,7 +72,6 @@
 		F66F96BA25BB589300727DCF /* Radio button off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Radio button off.png"; sourceTree = "<group>"; };
 		F66F96BE25BB6D5D00727DCF /* Auto base shape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Auto base shape.png"; sourceTree = "<group>"; };
 		F66F96BF25BB6D5D00727DCF /* 30 Focus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "30 Focus.png"; sourceTree = "<group>"; };
->>>>>>> parent of 37c6339... Merge branch 'main' into radioButtons
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,16 +159,13 @@
 		F66F96B125BB586800727DCF /* Images */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
 				EB482D1725BB62FE009120A2 /* QCPRInterface.swift */,
 				EB482D1A25BB6308009120A2 /* BLECore.swift */,
 				EB482D1D25BB6436009120A2 /* BLEDefinitions.swift */,
-=======
 				F66F96BF25BB6D5D00727DCF /* 30 Focus.png */,
 				F66F96BE25BB6D5D00727DCF /* Auto base shape.png */,
 				F66F96B725BB588700727DCF /* Radio button on.png */,
 				F66F96BA25BB589300727DCF /* Radio button off.png */,
->>>>>>> parent of 37c6339... Merge branch 'main' into radioButtons
 			);
 			path = Images;
 			sourceTree = "<group>";
