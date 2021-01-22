@@ -15,10 +15,37 @@ class ManagerViewController: UIViewController, UITableViewDelegate{
     
     private var deviceView: QCPRDeviceView?
     
+    let dataService = MultipeerDataService()
+    var qcprInterface = QCPRInterface()
+    let qcprInterface_2 = QCPRInterface()
+    var ble: BLEcore!
+    
+
+    @IBOutlet weak var lbl_device2: UILabel!
+    @IBOutlet weak var lbl_device1: UILabel!
+    
+    func updatelbl_dev1(withString string: String?) {
+        lbl_device1.text = string
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Manager"
+        qcprInterface.startBLE()
+        qcprInterface_2.startBLE()
+        qcprInterface.bleCore.compressionDelegate = self
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func didSelectViewDecies(_ sender: Any) {
+        print("going to show devices!")
+        qcprInterface.showDevicesList()
+    }
+    
+    @IBAction func didSelectPickDevice2(_ sender: Any) {
+        print("should show another copy of table of devices!!")
+        qcprInterface_2.showDevicesList()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,39 +63,37 @@ class ManagerViewController: UIViewController, UITableViewDelegate{
     
     @IBAction func didSelectButt_ViewAll(_ sender: Any) {
         showDevicesList() //could j pass in parameter:'vpm' to only show vpm's
-//        let new_BLEDevices = conv_MCPeerIDList_to_BLEDeviceList(peeridLi: service.discoveredDevices)
-        print("new BLEDevices about to show: ", service.discoveredDevices)//new_BLEDevices)
         deviceView?.update(devices: service.discoveredDevices)
     }
     
     @IBAction func didSelectButt_BVM(_ sender: Any) {
-        print("service's connected devices:", service.connectedDevices)
-        print("service's discovered devices:", service.discoveredDevices)
-        showDevicesList() //could j pass in parameter:'vpm' to only show vpm's
-        let new_BLEDevices = conv_MCPeerIDList_to_BLEDeviceList(peeridLi: service.connectedDevices, filter: "BVM")
-        print("new BLEDevices about to show: ", new_BLEDevices)
-        deviceView?.update(devices: new_BLEDevices)
-//        refreshDevicesList()
-//        refreshDevicesListState()
-
+        showDevicesList()
+        let filtered_devices = service.discoveredDevices.filter { $0.deviceName == "BVM" }
+        deviceView?.update(devices: filtered_devices)
     }
     
     @IBAction func didSelectButt_Steth(_ sender: Any) {
-        showDevicesList() //could j pass in parameter:'vpm' to only show vpm's
-        let new_BLEDevices = conv_MCPeerIDList_to_BLEDeviceList(peeridLi: service.connectedDevices, filter: "Stethoscope")
-        deviceView?.update(devices: new_BLEDevices)
+        showDevicesList()
+        let filtered_devices = service.discoveredDevices.filter { $0.deviceName == "Stethoscope" }
+        deviceView?.update(devices: filtered_devices)
     }
     
     @IBAction func didSelectButt_DF(_ sender: Any) {
-        showDevicesList() //could j pass in parameter:'vpm' to only show vpm's
-        let new_BLEDevices = conv_MCPeerIDList_to_BLEDeviceList(peeridLi: service.connectedDevices, filter: "Drugs and Fluids")
-        deviceView?.update(devices: new_BLEDevices)
+        showDevicesList()
+        let filtered_devices = service.discoveredDevices.filter { $0.deviceName == "Drugs and Fluids" }
+        deviceView?.update(devices: filtered_devices)
     }
     
     @IBAction func didSelectButt_MonitorBox(_ sender: Any) {
+        showDevicesList()
+        let filtered_devices = service.discoveredDevices.filter { $0.deviceName == "Monitor Box" }
+        deviceView?.update(devices: filtered_devices)
     }
     
     @IBAction func didSelectButt_BedsideDiagnostics(_ sender: Any) {
+        showDevicesList()
+        let filtered_devices = service.discoveredDevices.filter { $0.deviceName == "Bedside Monitor" }
+        deviceView?.update(devices: filtered_devices)
     }
     
     public func showDevicesList() {
@@ -76,48 +101,25 @@ class ManagerViewController: UIViewController, UITableViewDelegate{
         print("inside showing devices, will show deviceview next")
         deviceView = QCPRDeviceView.show()
         deviceView!.delegate = service
-//            deviceView?.delegate = self
 //        }
     }
     
-    public func refreshDevicesList() {
-        print("refreshing devices now")
-        
-//        deviceView?.updateConnectedDevice(device: bleCore.connectedDevice(), autoDismiss: false)
-    }
+}
+
+extension ManagerViewController: QCPRCompressionDelegate {
     
-    public func conv_MCPeerIDList_to_BLEDeviceList(peeridLi: [MCPeerID], filter: String) -> [BLEDevice] {
-        var mcpeerid_to_bledevice: [BLEDevice] = []
-        for ele in peeridLi{
-            if (ele.displayName == filter){
-                mcpeerid_to_bledevice.append(BLEDevice(uuid: "device's ID", deviceName: ele.displayName))
-                print("1 ele", ele.displayName) //ele["DisplayName"]
-            }
-        }
-        return mcpeerid_to_bledevice
+    func compressionUpdated(comp_dep: Int, comp_rate: Int) {
+    
+        lbl_device1.text = String(comp_rate)
+        print("Compression Delegate Fire with comp_rate", comp_rate)
+        print(service.truMonitorDevices)
+        let jsonPayload = "{​​​​​​​​\"parameters\":[{​​​​​​​​\"type\":\"heartRate\",\"value\":" + String(comp_rate) + ",\"changeTime\":0}​​​​​​​​],\"waveforms\":[],\"customParameters\":[],\"visibilities\":[]}​​​​​​​​"
+
+        let controlRequest = ControlRequest(route: "vitals", rootPayload: jsonPayload)
+
+        service.sendDataToTruMonitor(request: controlRequest, peers: service.truMonitorDevices)
+        
     }
 
-    public func conv_MCPeerIDList_to_BLEDeviceList(peeridLi: [MCPeerID]) -> [BLEDevice] {
-        var mcpeerid_to_bledevice: [BLEDevice] = []
-        for ele in peeridLi{
-//            if (ele.displayName == filter){
-            mcpeerid_to_bledevice.append(BLEDevice(uuid: "device's ID", deviceName: ele.displayName, peerID: ele))
-                print("1 ele", ele) //ele["DisplayName"]
-//            }
-        }
-        return mcpeerid_to_bledevice
-    }
-//    public func refreshDevicesListState() {
-//        deviceView?.update(searching: bleCore.isScanning(), bluetoothOn: bleCore.bluetoothOn())
-//    }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

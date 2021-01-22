@@ -15,6 +15,7 @@ class HostService: NSObject {
     var browser: MCNearbyServiceBrowser!
     var discoveredDevices: [BLEDevice] = []
     var connectedDevices: [MCPeerID] = []
+    var truMonitorDevices: [MCPeerID] = []
     var myPeerID = MCPeerID(displayName: "host")
     var service = "trumonitor-ctrl"
     //dictionary of mcpeerid --> phone id's?
@@ -40,6 +41,45 @@ class HostService: NSObject {
     }
     
     
+    func sendDataToTruMonitor(request: ControlRequest, peers: [MCPeerID]) {
+
+         
+
+         guard let data = controlRequestData(request: request) else { return }
+        
+         if peers.count == 0 { return }
+         do {
+            print("About to send", data)
+             try self.session.send(data, toPeers: peers, with: .reliable)
+         } catch let error {
+             print("%@", "Error for sending: \(error)")
+         }
+     }
+
+     
+
+     private func controlRequestData(request: ControlRequest) -> Data? {
+
+         let jsonEncoder = JSONEncoder()
+         var jsonData: Data?
+
+         do {
+            jsonData = try jsonEncoder.encode(request)
+            let jsonString = String(data: jsonData!, encoding: .utf8)
+            print("JSON String : " + jsonString!)
+        }
+        catch {
+            print(error.localizedDescription)
+        }
+
+        guard let data = jsonData else {
+            print("Attempted to send empty data set")
+            return nil
+        }
+
+         return data
+     }
+    
 }
 
 
@@ -48,8 +88,12 @@ extension HostService: MCNearbyServiceBrowserDelegate {
     func browser(_ browser: MCNearbyServiceBrowser, foundPeer peerID: MCPeerID, withDiscoveryInfo info: [String : String]?) {
         
         print("\(peerID) device found")
-        print("info: ", info)
-        discoveredDevices.append(BLEDevice(uuid: info!["device_id"], deviceName: info!["device_name"], peerID: peerID))
+        
+        guard let device_name = info!["device_name"], let device_id = info!["device_id"] else {
+            discoveredDevices.append(BLEDevice(uuid: "N/A", deviceName: "Trumonitor Tablet", peerID: peerID))
+            return
+        }
+        discoveredDevices.append(BLEDevice(uuid: "\(device_name) : \(device_id) ", deviceName: peerID.displayName, peerID: peerID))
 //        browser.invitePeer(peerID, to: session, withContext: nil, timeout: 30) //can we just add to discovered/connected devices, and then invite once they select it?
         
     }
@@ -60,15 +104,18 @@ extension HostService: MCNearbyServiceBrowserDelegate {
         print("discovered devices", discoveredDevices)
         
         guard let index = discoveredDevices.firstIndex(where: { $0.peerID == peerID })  else { return }
-        
+        print("before\(discoveredDevices.count)")
         discoveredDevices.remove(at: index)
-        
+        print("after\(discoveredDevices.count)")
 //        guard let index2 = discoveredDevices.firstIndex(where: { $0.peerID == peerID })  else { return }
 
         guard let index2 = connectedDevices.firstIndex(of: peerID) else { return }
         
-        
         connectedDevices.remove(at: index2)
+        
+        guard let index3 = truMonitorDevices.firstIndex(of: peerID) else { return }
+
+        truMonitorDevices.remove(at: index3)
     }
     
 }
@@ -88,6 +135,11 @@ extension HostService: MCSessionDelegate {
         case .connected:
             print("-- \(peerID) Connected -- ")
             connectedDevices.append(peerID)
+            if (peerID.displayName != "Stethoscope" && peerID.displayName != "BVM" && peerID.displayName != "Drugs and Fluids" && peerID.displayName != "Bedside Monitor" && peerID.displayName != "Monitor Box"){
+                
+                print("trumonitor device found")
+                truMonitorDevices.append(peerID)
+            }
         @unknown default:
             break
         }
@@ -124,8 +176,38 @@ extension HostService: MCSessionDelegate {
 extension HostService: QCPRDeviceViewDelegate {
 
     func requestConnect(device: BLEDevice) {
+
         //bleCore.requestConnect(device: device)
+
         print("inviting: ", device.peerID)
+
         browser.invitePeer(device.peerID!, to: session, withContext: nil, timeout: 30)
+
+        
+
+        print("Checking for previous stethscope")
+
+        guard let index = connectedDevices.firstIndex(where: { (peerID) -> Bool in
+
+            return device.peerID?.displayName == peerID.displayName
+
+        }) else { return }
+
+        
+
+        print("Existing stethoscope found")
+
+        
+
+        do {
+
+            try  session.send(Data(bytes: [1], count: 1), toPeers: [connectedDevices[index]], with: .reliable)
+
+        }catch let error {
+            print("%@", "Error for sending: \(error)")
+        }
+
+        connectedDevices.remove(at: index)
+
     }
 }
