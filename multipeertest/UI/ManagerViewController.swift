@@ -109,14 +109,15 @@ class ManagerViewController: UIViewController, UITableViewDelegate{
 extension ManagerViewController: QCPRCompressionDelegate {
     
     func compressionUpdated(comp_dep: Int, comp_rate: Int) {
-        
-    print("Compression Delegate Fire")
-    print(service.truMonitorDevices)
-    let jsonPayload = "{​​​​​​​​\"parameters\":[{​​​​​​​​\"type\":\"heartRate\",\"value\":" + String(comp_rate) + ",\"changeTime\":0}​​​​​​​​],\"waveforms\":[],\"customParameters\":[],\"visibilities\":[]}​​​​​​​​"
+    
+        lbl_device1.text = String(comp_rate)
+        print("Compression Delegate Fire with comp_rate", comp_rate)
+        print(service.truMonitorDevices)
+        let jsonPayload = "{​​​​​​​​\"parameters\":[{​​​​​​​​\"type\":\"heartRate\",\"value\":" + String(comp_rate) + ",\"changeTime\":0}​​​​​​​​],\"waveforms\":[],\"customParameters\":[],\"visibilities\":[]}​​​​​​​​"
 
-    let controlRequest = ControlRequest(route: "vitals", rootPayload: jsonPayload)
+        let controlRequest = ControlRequest(route: "vitals", rootPayload: jsonPayload)
 
-    service.sendDataToTruMonitor(request: controlRequest, peers: service.truMonitorDevices)
+        service.sendDataToTruMonitor(request: controlRequest, peers: service.truMonitorDevices)
         
     }
 
