@@ -15,7 +15,6 @@ class ManagerViewController: UIViewController, UITableViewDelegate{
     
     private var deviceView: QCPRDeviceView?
     
-    let dataService = MultipeerDataService()
     var qcprInterface = QCPRInterface()
     let qcprInterface_2 = QCPRInterface()
     var ble: BLEcore!
@@ -113,7 +112,9 @@ extension ManagerViewController: QCPRCompressionDelegate {
         lbl_device1.text = String(comp_rate)
         print("Compression Delegate Fire with comp_rate", comp_rate)
         print(service.truMonitorDevices)
-        let jsonPayload = "{​​​​​​​​\"parameters\":[{​​​​​​​​\"type\":\"heartRate\",\"value\":" + String(comp_rate) + ",\"changeTime\":0}​​​​​​​​],\"waveforms\":[],\"customParameters\":[],\"visibilities\":[]}​​​​​​​​"
+        let jsonPayload =
+            
+            "{\"parameters\":[{\"type\":\"heartRate\",\"value\":\(String(comp_rate)),\"changeTime\":0}],\"waveforms\":[],\"customParameters\":[],\"visibilities\":[]}"
 
         let controlRequest = ControlRequest(route: "vitals", rootPayload: jsonPayload)
 

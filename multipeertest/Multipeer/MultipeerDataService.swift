@@ -51,7 +51,7 @@ class MultipeerDataService: NSObject, MCNearbyServiceAdvertiserDelegate, MCNearb
     private let serviceBrowser : MCNearbyServiceBrowser
     
     private var discoveredPeers: [MCPeerID: Device] = [:]
-    private var connectedPeers: [MCPeerID] = []
+    var connectedPeers: [MCPeerID] = []
     
     lazy var session : MCSession = {
         let session = MCSession(peer: self.myPeerId, securityIdentity: nil, encryptionPreference: .optional)

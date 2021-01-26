@@ -50,7 +50,7 @@ class HostService: NSObject {
          if peers.count == 0 { return }
          do {
             print("About to send", data)
-             try self.session.send(data, toPeers: peers, with: .reliable)
+             try session.send(data, toPeers: peers, with: .reliable)
          } catch let error {
              print("%@", "Error for sending: \(error)")
          }

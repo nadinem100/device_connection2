@@ -176,6 +176,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zfm-ps-SpA">
+                                <rect key="frame" x="94" y="496" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="OFF"/>
+                                <connections>
+                                    <action selector="offButton:" destination="S5c-xF-HPL" eventType="touchUpInside" id="7E7-Zd-Sp9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="neT-wG-KpM"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
@@ -188,7 +196,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hqw-TB-j0j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2203" y="402"/>
+            <point key="canvasLocation" x="2202.898550724638" y="401.78571428571428"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="utu-It-8ze">
