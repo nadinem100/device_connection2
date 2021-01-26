@@ -31,6 +31,13 @@
 		EB482D1E25BB6436009120A2 /* BLEDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB482D1D25BB6436009120A2 /* BLEDefinitions.swift */; };
 		EB482D2125BB6524009120A2 /* CompressionCompleteEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB482D2025BB6524009120A2 /* CompressionCompleteEvent.swift */; };
 		EB482D2625BB65B2009120A2 /* QCPRServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB482D2525BB65B2009120A2 /* QCPRServices.swift */; };
+		F6770F1F25C083BF0013E394 /* IV Bolus.png in Resources */ = {isa = PBXBuildFile; fileRef = F6770F1B25C083BE0013E394 /* IV Bolus.png */; };
+		F6770F2025C083BF0013E394 /* Radio button off.png in Resources */ = {isa = PBXBuildFile; fileRef = F6770F1C25C083BE0013E394 /* Radio button off.png */; };
+		F6770F2125C083BF0013E394 /* Radio button on.png in Resources */ = {isa = PBXBuildFile; fileRef = F6770F1D25C083BE0013E394 /* Radio button on.png */; };
+		F6770F2225C083BF0013E394 /* Check Temperature.png in Resources */ = {isa = PBXBuildFile; fileRef = F6770F1E25C083BF0013E394 /* Check Temperature.png */; };
+		F6770F2725C0851C0013E394 /* DLRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F6770F2625C0851C0013E394 /* DLRadioButton.m */; };
+		F6770F2B25C087BB0013E394 /* AdministerGray.png in Resources */ = {isa = PBXBuildFile; fileRef = F6770F2925C087BA0013E394 /* AdministerGray.png */; };
+		F6770F2C25C087BB0013E394 /* AdministerBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = F6770F2A25C087BA0013E394 /* AdministerBlue.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +67,15 @@
 		EB482D1D25BB6436009120A2 /* BLEDefinitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEDefinitions.swift; sourceTree = "<group>"; };
 		EB482D2025BB6524009120A2 /* CompressionCompleteEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompressionCompleteEvent.swift; sourceTree = "<group>"; };
 		EB482D2525BB65B2009120A2 /* QCPRServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QCPRServices.swift; sourceTree = "<group>"; };
+		F6770F1B25C083BE0013E394 /* IV Bolus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IV Bolus.png"; sourceTree = "<group>"; };
+		F6770F1C25C083BE0013E394 /* Radio button off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Radio button off.png"; sourceTree = "<group>"; };
+		F6770F1D25C083BE0013E394 /* Radio button on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Radio button on.png"; sourceTree = "<group>"; };
+		F6770F1E25C083BF0013E394 /* Check Temperature.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Check Temperature.png"; sourceTree = "<group>"; };
+		F6770F2425C0851B0013E394 /* multipeertest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "multipeertest-Bridging-Header.h"; sourceTree = "<group>"; };
+		F6770F2525C0851C0013E394 /* DLRadioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLRadioButton.h; sourceTree = "<group>"; };
+		F6770F2625C0851C0013E394 /* DLRadioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLRadioButton.m; sourceTree = "<group>"; };
+		F6770F2925C087BA0013E394 /* AdministerGray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AdministerGray.png; sourceTree = "<group>"; };
+		F6770F2A25C087BA0013E394 /* AdministerBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AdministerBlue.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +133,9 @@
 		795AC92E25B6D68500DB3B6F /* multipeertest */ = {
 			isa = PBXGroup;
 			children = (
+				F6770F2525C0851C0013E394 /* DLRadioButton.h */,
+				F6770F2625C0851C0013E394 /* DLRadioButton.m */,
+				F6770F1A25C083B30013E394 /* Images */,
 				EB482D2325BB652D009120A2 /* Characteristics */,
 				EB482D1625BB62D7009120A2 /* Bluetooth */,
 				12AF040725B9DBB200DEC006 /* UI */,
@@ -128,6 +147,7 @@
 				795AC93825B6D68600DB3B6F /* Assets.xcassets */,
 				795AC93A25B6D68600DB3B6F /* LaunchScreen.storyboard */,
 				795AC93D25B6D68600DB3B6F /* Info.plist */,
+				F6770F2425C0851B0013E394 /* multipeertest-Bridging-Header.h */,
 			);
 			path = multipeertest;
 			sourceTree = "<group>";
@@ -161,6 +181,19 @@
 			path = Characteristics;
 			sourceTree = "<group>";
 		};
+		F6770F1A25C083B30013E394 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				F6770F2A25C087BA0013E394 /* AdministerBlue.png */,
+				F6770F2925C087BA0013E394 /* AdministerGray.png */,
+				F6770F1E25C083BF0013E394 /* Check Temperature.png */,
+				F6770F1B25C083BE0013E394 /* IV Bolus.png */,
+				F6770F1C25C083BE0013E394 /* Radio button off.png */,
+				F6770F1D25C083BE0013E394 /* Radio button on.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -192,6 +225,7 @@
 				TargetAttributes = {
 					795AC92B25B6D68500DB3B6F = {
 						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1230;
 					};
 				};
 			};
@@ -218,9 +252,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6770F1F25C083BF0013E394 /* IV Bolus.png in Resources */,
+				F6770F2B25C087BB0013E394 /* AdministerGray.png in Resources */,
 				795AC93C25B6D68600DB3B6F /* LaunchScreen.storyboard in Resources */,
 				EB482D0625BA795A009120A2 /* QCPRDeviceView.storyboard in Resources */,
+				F6770F2C25C087BB0013E394 /* AdministerBlue.png in Resources */,
+				F6770F2025C083BF0013E394 /* Radio button off.png in Resources */,
+				F6770F2225C083BF0013E394 /* Check Temperature.png in Resources */,
 				795AC93925B6D68600DB3B6F /* Assets.xcassets in Resources */,
+				F6770F2125C083BF0013E394 /* Radio button on.png in Resources */,
 				795AC93725B6D68500DB3B6F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,6 +288,7 @@
 				EB482D2125BB6524009120A2 /* CompressionCompleteEvent.swift in Sources */,
 				12AC105225BA299100DBB38B /* BVMViewController.swift in Sources */,
 				EB482D2625BB65B2009120A2 /* QCPRServices.swift in Sources */,
+				F6770F2725C0851C0013E394 /* DLRadioButton.m in Sources */,
 				12AC105525BA29AB00DBB38B /* BedsideViewController.swift in Sources */,
 				12AF041225B9E2F000DEC006 /* ManagerViewController.swift in Sources */,
 				12AC104F25BA274E00DBB38B /* SimulatorViewController.swift in Sources */,
@@ -398,15 +439,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7M6UAB95WX;
+				DEVELOPMENT_TEAM = T2WFDGU5F7;
 				INFOPLIST_FILE = multipeertest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.nmeister.HeartRateMonitor1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andrew.HeartRateMonitor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "multipeertest/multipeertest-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -417,15 +461,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7M6UAB95WX;
+				DEVELOPMENT_TEAM = T2WFDGU5F7;
 				INFOPLIST_FILE = multipeertest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.nmeister.HeartRateMonitor1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andrew.HeartRateMonitor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "multipeertest/multipeertest-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
