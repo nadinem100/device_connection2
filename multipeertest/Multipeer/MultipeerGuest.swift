@@ -43,12 +43,12 @@ class AdvertisingService: NSObject {
     
     func signal() {
         
-        let data = Data(bytes: [0], count: 1)
+        let data = "Signal".data(using: .utf8)
         
         do{
             
             if host != nil {
-                try session.send(data, toPeers: [host], with: .reliable)
+                try session.send(data!, toPeers: [host], with: .reliable)
             }
  
         }catch let error {
@@ -57,8 +57,20 @@ class AdvertisingService: NSObject {
             
         }
         
+    }
+    
+    func send(data: Data) {
+        
+        do {
+            if host != nil {
+                try session.send(data, toPeers: [host], with: .reliable)
+            }
+        }catch let error {
+            print("%@", "Error for sending: \(error)")
+        }
         
     }
+    
 }
 
 

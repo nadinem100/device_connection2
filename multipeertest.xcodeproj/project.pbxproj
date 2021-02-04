@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		127F8E4425CC6D7100B87F09 /* DrugsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127F8E4325CC6D7100B87F09 /* DrugsViewController.swift */; };
+		127F8E4825CC6D7800B87F09 /* FluidsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127F8E4725CC6D7800B87F09 /* FluidsViewController.swift */; };
 		12AC104F25BA274E00DBB38B /* SimulatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AC104E25BA274E00DBB38B /* SimulatorViewController.swift */; };
 		12AC105225BA299100DBB38B /* BVMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AC105125BA299100DBB38B /* BVMViewController.swift */; };
 		12AC105525BA29AB00DBB38B /* BedsideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AC105425BA29AB00DBB38B /* BedsideViewController.swift */; };
@@ -41,6 +43,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		127F8E4325CC6D7100B87F09 /* DrugsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugsViewController.swift; sourceTree = "<group>"; };
+		127F8E4725CC6D7800B87F09 /* FluidsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FluidsViewController.swift; sourceTree = "<group>"; };
 		12AC104E25BA274E00DBB38B /* SimulatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorViewController.swift; sourceTree = "<group>"; };
 		12AC105125BA299100DBB38B /* BVMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BVMViewController.swift; sourceTree = "<group>"; };
 		12AC105425BA29AB00DBB38B /* BedsideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BedsideViewController.swift; sourceTree = "<group>"; };
@@ -89,14 +93,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		127F8E4225CC6D6300B87F09 /* Drugs and Fluids */ = {
+			isa = PBXGroup;
+			children = (
+				12AC105725BA29C500DBB38B /* DFViewController.swift */,
+				127F8E4325CC6D7100B87F09 /* DrugsViewController.swift */,
+				127F8E4725CC6D7800B87F09 /* FluidsViewController.swift */,
+			);
+			path = "Drugs and Fluids";
+			sourceTree = "<group>";
+		};
 		12AC105D25BA33C500DBB38B /* Device */ = {
 			isa = PBXGroup;
 			children = (
+				127F8E4225CC6D6300B87F09 /* Drugs and Fluids */,
 				12AC104E25BA274E00DBB38B /* SimulatorViewController.swift */,
 				12AF040B25B9DC3A00DEC006 /* StethViewController.swift */,
 				12AC105125BA299100DBB38B /* BVMViewController.swift */,
 				12AC105425BA29AB00DBB38B /* BedsideViewController.swift */,
-				12AC105725BA29C500DBB38B /* DFViewController.swift */,
 				12AC105A25BA29DC00DBB38B /* MonitorViewController.swift */,
 			);
 			path = Device;
@@ -275,9 +289,11 @@
 				795AC93425B6D68500DB3B6F /* ViewController.swift in Sources */,
 				12AC105B25BA29DC00DBB38B /* MonitorViewController.swift in Sources */,
 				795AC93025B6D68500DB3B6F /* AppDelegate.swift in Sources */,
+				127F8E4825CC6D7800B87F09 /* FluidsViewController.swift in Sources */,
 				795AC93225B6D68500DB3B6F /* SceneDelegate.swift in Sources */,
 				EB482D1E25BB6436009120A2 /* BLEDefinitions.swift in Sources */,
 				EB482D1B25BB6308009120A2 /* BLECore.swift in Sources */,
+				127F8E4425CC6D7100B87F09 /* DrugsViewController.swift in Sources */,
 				12AC106325BA343800DBB38B /* MultipeerGuest.swift in Sources */,
 				EB482D1825BB62FE009120A2 /* QCPRInterface.swift in Sources */,
 				12AC105F25BA340000DBB38B /* MultipeerHost.swift in Sources */,
@@ -441,13 +457,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T2WFDGU5F7;
+				DEVELOPMENT_TEAM = 7M6UAB95WX;
 				INFOPLIST_FILE = multipeertest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.andrew.HeartRateMonitor;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andrew.HeartRateMonitor1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "multipeertest/multipeertest-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -463,13 +479,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T2WFDGU5F7;
+				DEVELOPMENT_TEAM = 7M6UAB95WX;
 				INFOPLIST_FILE = multipeertest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.andrew.HeartRateMonitor;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andrew.HeartRateMonitor1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "multipeertest/multipeertest-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

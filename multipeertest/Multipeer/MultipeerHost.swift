@@ -135,7 +135,8 @@ extension HostService: MCSessionDelegate {
         case .connected:
             print("-- \(peerID) Connected -- ")
             connectedDevices.append(peerID)
-            if (peerID.displayName != "Stethoscope" && peerID.displayName != "BVM" && peerID.displayName != "Drugs and Fluids" && peerID.displayName != "Bedside Monitor" && peerID.displayName != "Monitor Box"){
+            if (peerID.displayName != "Stethoscope" && peerID.displayName != "BVM" && peerID.displayName != "Drugs" && peerID.displayName != "Bedside Monitor" && peerID.displayName != "Monitor Box" &&
+                peerID.displayName != "Fluids"){
                 
                 print("trumonitor device found")
                 truMonitorDevices.append(peerID)
@@ -149,7 +150,9 @@ extension HostService: MCSessionDelegate {
     
     func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
         
-        print("Recieved signal from \(peerID)")
+        print("Recieved from \(peerID)")
+        
+        print(String(decoding: data, as: UTF8.self))
         
     }
     

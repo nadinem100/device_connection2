@@ -218,7 +218,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gz-SN-ZcA">
-                                <rect key="frame" x="159" y="267" width="96" height="96"/>
+                                <rect key="frame" x="156" y="197" width="96" height="96"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="IV Bolus.png">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -228,7 +228,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghu-qb-5U0">
-                                <rect key="frame" x="159" y="567" width="96" height="96"/>
+                                <rect key="frame" x="156" y="497" width="96" height="96"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="Check Temperature.png">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -238,13 +238,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Maintenance Fluid" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="knq-GT-liN">
-                                <rect key="frame" x="122" y="371" width="174" height="27"/>
+                                <rect key="frame" x="120" y="301" width="174" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Drugs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGN-9p-iIH">
-                                <rect key="frame" x="178" y="679" width="58" height="27"/>
+                                <rect key="frame" x="175" y="609" width="58" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="highlightedColor"/>
@@ -262,8 +262,7 @@
         <!--Drugs and Fluids-->
         <scene sceneID="JsJ-Vu-34l">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="g3b-5m-ata" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController id="9Fr-Ay-W0r" sceneMemberID="viewController">
+                <viewController id="9Fr-Ay-W0r" customClass="FluidsViewController" customModule="multipeertest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P6G-UM-upE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -293,6 +292,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="colloids:" destination="9Fr-Ay-W0r" eventType="touchUpInside" id="2QI-Be-KBO"/>
                                     <outletCollection property="otherButtons" destination="1a7-WO-MjU" id="zaJ-sc-8yu"/>
                                     <outletCollection property="otherButtons" destination="8P4-uF-oje" id="ci9-lE-AYI"/>
                                     <outletCollection property="otherButtons" destination="cyQ-nP-6P7" id="4AR-Yc-vG2"/>
@@ -317,6 +317,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="crystalloids:" destination="9Fr-Ay-W0r" eventType="touchUpInside" id="zst-QK-zyo"/>
                                     <outletCollection property="otherButtons" destination="Ute-ot-81f" id="Orv-b1-Lsl"/>
                                     <outletCollection property="otherButtons" destination="8P4-uF-oje" id="2SA-FK-ZJi"/>
                                     <outletCollection property="otherButtons" destination="cyQ-nP-6P7" id="BwL-V9-cT1"/>
@@ -341,6 +342,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="hartmann:" destination="9Fr-Ay-W0r" eventType="touchUpInside" id="cTF-72-0Ni"/>
                                     <outletCollection property="otherButtons" destination="Ute-ot-81f" id="MfK-D8-4kE"/>
                                     <outletCollection property="otherButtons" destination="1a7-WO-MjU" id="ue0-Pr-aWS"/>
                                     <outletCollection property="otherButtons" destination="cyQ-nP-6P7" id="oyH-b1-bvD"/>
@@ -365,6 +367,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="lactate:" destination="9Fr-Ay-W0r" eventType="touchUpInside" id="jvN-oQ-hDg"/>
                                     <outletCollection property="otherButtons" destination="Ute-ot-81f" id="sTG-ud-0YD"/>
                                     <outletCollection property="otherButtons" destination="1a7-WO-MjU" id="x4e-am-3Ad"/>
                                     <outletCollection property="otherButtons" destination="8P4-uF-oje" id="Ieo-pe-hMn"/>
@@ -389,6 +392,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="saline:" destination="9Fr-Ay-W0r" eventType="touchUpInside" id="V81-QJ-U4l"/>
                                     <outletCollection property="otherButtons" destination="Ute-ot-81f" id="uXk-v9-34x"/>
                                     <outletCollection property="otherButtons" destination="1a7-WO-MjU" id="wYt-Io-Ngr"/>
                                     <outletCollection property="otherButtons" destination="8P4-uF-oje" id="sfp-BJ-5bt"/>
@@ -420,6 +424,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="dose1:" destination="9Fr-Ay-W0r" eventType="touchUpInside" id="7qf-0D-1Be"/>
                                     <outletCollection property="otherButtons" destination="KOh-ZU-X9w" id="7pb-ZS-zKX"/>
                                 </connections>
                             </button>
@@ -441,13 +446,18 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="dose2:" destination="9Fr-Ay-W0r" eventType="touchUpInside" id="T2W-bo-wyq"/>
                                     <outletCollection property="otherButtons" destination="fIr-5Z-i4s" id="lFX-fH-bnq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGx-1e-lUi">
-                                <rect key="frame" x="266" y="808" width="128" height="54"/>
+                                <rect key="frame" x="251" y="576" width="128" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="AdministerBlue.png"/>
+                                <connections>
+                                    <action selector="administer:" destination="9Fr-Ay-W0r" eventType="touchUpInside" id="Tbx-Hu-koZ"/>
+                                    <action selector="administer:" destination="fdE-Cm-i7F" eventType="touchUpInside" id="xBm-vO-tcE"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="24y-Kc-gVG"/>
@@ -455,6 +465,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Drugs and Fluids" largeTitleDisplayMode="never" id="rtu-pm-vXL"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g3b-5m-ata" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="fdE-Cm-i7F" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4714" y="-1212"/>
         </scene>
@@ -653,8 +665,7 @@
         <!--Drugs and Fluids-->
         <scene sceneID="5wk-yK-gow">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xJi-Of-WYa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController id="sGW-vG-fc1" sceneMemberID="viewController">
+                <viewController id="sGW-vG-fc1" customClass="DrugsViewController" customModule="multipeertest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F9z-wa-A9C">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -684,6 +695,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="colloids:" destination="sGW-vG-fc1" eventType="touchUpInside" id="HtG-zd-jXr"/>
                                     <outletCollection property="otherButtons" destination="QP1-qK-lRU" id="GG1-3a-J3k"/>
                                     <outletCollection property="otherButtons" destination="b8f-1V-gDB" id="MCA-VI-HCO"/>
                                     <outletCollection property="otherButtons" destination="XSK-k6-gUo" id="5oR-yJ-ece"/>
@@ -708,6 +720,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="crystalloids:" destination="sGW-vG-fc1" eventType="touchUpInside" id="vnl-m1-JJH"/>
                                     <outletCollection property="otherButtons" destination="kAJ-8e-Cjq" id="2x4-b4-4MW"/>
                                     <outletCollection property="otherButtons" destination="b8f-1V-gDB" id="eeI-GG-roN"/>
                                     <outletCollection property="otherButtons" destination="XSK-k6-gUo" id="71Z-L8-Hyt"/>
@@ -732,6 +745,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="hartmann:" destination="sGW-vG-fc1" eventType="touchUpInside" id="rU4-4b-Nz4"/>
                                     <outletCollection property="otherButtons" destination="kAJ-8e-Cjq" id="TOV-c3-nM8"/>
                                     <outletCollection property="otherButtons" destination="QP1-qK-lRU" id="4Bh-px-ft1"/>
                                     <outletCollection property="otherButtons" destination="XSK-k6-gUo" id="fJO-jx-JFP"/>
@@ -756,6 +770,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="lactate:" destination="sGW-vG-fc1" eventType="touchUpInside" id="eMR-VX-9rO"/>
                                     <outletCollection property="otherButtons" destination="kAJ-8e-Cjq" id="nBb-LL-f1A"/>
                                     <outletCollection property="otherButtons" destination="QP1-qK-lRU" id="e0a-R5-b3l"/>
                                     <outletCollection property="otherButtons" destination="b8f-1V-gDB" id="hXA-xr-34t"/>
@@ -780,6 +795,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="saline:" destination="sGW-vG-fc1" eventType="touchUpInside" id="asO-LV-ZW3"/>
                                     <outletCollection property="otherButtons" destination="kAJ-8e-Cjq" id="KUc-oQ-SZh"/>
                                     <outletCollection property="otherButtons" destination="QP1-qK-lRU" id="xah-E0-FSb"/>
                                     <outletCollection property="otherButtons" destination="b8f-1V-gDB" id="ScO-Fg-VI4"/>
@@ -811,6 +827,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="dose3:" destination="sGW-vG-fc1" eventType="touchUpInside" id="o4n-Vs-Ciy"/>
                                     <outletCollection property="otherButtons" destination="4A9-ne-N3C" id="tUm-1v-hjD"/>
                                     <outletCollection property="otherButtons" destination="t82-3j-5Xv" id="LxB-V8-IyX"/>
                                 </connections>
@@ -833,14 +850,10 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="dose6:" destination="sGW-vG-fc1" eventType="touchUpInside" id="Q97-dd-HCO"/>
                                     <outletCollection property="otherButtons" destination="8SQ-xm-MAC" id="hcR-LT-E95"/>
                                     <outletCollection property="otherButtons" destination="t82-3j-5Xv" id="EDh-6I-I3l"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vu9-XO-DMS">
-                                <rect key="frame" x="266" y="808" width="128" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="AdministerBlue.png"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t82-3j-5Xv" customClass="DLRadioButton">
                                 <rect key="frame" x="20" y="638" width="374" height="41"/>
@@ -860,8 +873,17 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="dose12:" destination="sGW-vG-fc1" eventType="touchUpInside" id="bF7-3s-dcj"/>
                                     <outletCollection property="otherButtons" destination="4A9-ne-N3C" id="Ha1-AD-qgz"/>
                                     <outletCollection property="otherButtons" destination="8SQ-xm-MAC" id="hgO-wE-E7B"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vu9-XO-DMS">
+                                <rect key="frame" x="266" y="625" width="128" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="AdministerBlue.png"/>
+                                <connections>
+                                    <action selector="administer:" destination="sGW-vG-fc1" eventType="touchUpInside" id="ERO-Q7-tFY"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -870,6 +892,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Drugs and Fluids" largeTitleDisplayMode="never" id="Uam-MP-8zN"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xJi-Of-WYa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4713" y="-530"/>
         </scene>
