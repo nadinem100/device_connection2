@@ -310,7 +310,7 @@ extension BLEcore: CBPeripheralDelegate{
         let rate = Int(data?[9] ?? 0)
         print("compression depth:", maxCompressionDepth)
         print("compression rate:", rate)
-        compressionDelegate?.compressionUpdated(comp_dep: maxCompressionDepth, comp_rate: rate)
+        compressionDelegate?.compressionUpdated(uuid: connectedDevice()?.uuid, comp_dep: maxCompressionDepth, comp_rate: rate)
     }
 }
 

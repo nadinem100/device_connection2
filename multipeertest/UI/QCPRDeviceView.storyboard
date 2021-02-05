@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--iOS Devices Nearby-->
+        <!--Devices Nearby-->
         <scene sceneID="ozc-Wy-XwY">
             <objects>
                 <viewController storyboardIdentifier="QCPRDeviceView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jhb-cf-jUb" customClass="QCPRDeviceView" customModule="multipeertest" customModuleProvider="target" sceneMemberID="viewController">
@@ -46,7 +46,7 @@
                             <constraint firstAttribute="bottom" secondItem="QDv-3O-IDT" secondAttribute="bottom" id="gAt-R2-X0D"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="iOS Devices Nearby" id="FE8-mb-xmD">
+                    <navigationItem key="navigationItem" title="Devices Nearby" id="FE8-mb-xmD">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="1zg-j7-NnC">
                             <connections>
                                 <action selector="didSelectDismiss" destination="jhb-cf-jUb" id="18S-6B-HBO"/>

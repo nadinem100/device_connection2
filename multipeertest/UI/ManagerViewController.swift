@@ -22,10 +22,9 @@ class ManagerViewController: UIViewController, UITableViewDelegate{
 
     @IBOutlet weak var lbl_device2: UILabel!
     @IBOutlet weak var lbl_device1: UILabel!
+    @IBOutlet weak var comprate_1: UILabel!
+    @IBOutlet weak var comprate_2: UILabel!
     
-    func updatelbl_dev1(withString string: String?) {
-        lbl_device1.text = string
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +32,7 @@ class ManagerViewController: UIViewController, UITableViewDelegate{
         qcprInterface.startBLE()
         qcprInterface_2.startBLE()
         qcprInterface.bleCore.compressionDelegate = self
+        qcprInterface_2.bleCore.compressionDelegate = self
         // Do any additional setup after loading the view.
     }
     
@@ -107,9 +107,22 @@ class ManagerViewController: UIViewController, UITableViewDelegate{
 
 extension ManagerViewController: QCPRCompressionDelegate {
     
-    func compressionUpdated(comp_dep: Int, comp_rate: Int) {
+    func compressionUpdated(uuid: String?, comp_dep: Int, comp_rate: Int) {
+        print("selected's uuid", String((qcprInterface.bleCore.connectedDevice()?.uuid) ?? "None"));
+        print("uuid", String(uuid!));
+        if (String((qcprInterface_2.bleCore.connectedDevice()?.uuid) ?? "None") == String(uuid!)){
+            lbl_device2.text = "Compression Depth: " + String(comp_dep);
+            comprate_2.text = "Compression Rate: " + String(comp_rate);
+        }
+        
+        if (String((qcprInterface.bleCore.connectedDevice()?.uuid) ?? "None") == String(uuid!)){
+            lbl_device1.text = "Compression Depth: " + String(comp_dep);
+            comprate_1.text = "Compression Rate: \( String(comp_rate))";
+        }
+        
     
-        lbl_device1.text = String(comp_rate)
+        //if receiving uuid = 1st pick's uuid...
+        
         print("Compression Delegate Fire with comp_rate", comp_rate)
         print(service.truMonitorDevices)
         let jsonPayload =

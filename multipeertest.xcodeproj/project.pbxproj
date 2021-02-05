@@ -457,13 +457,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7M6UAB95WX;
+				DEVELOPMENT_TEAM = 59H894L2Q3;
 				INFOPLIST_FILE = multipeertest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.andrew.HeartRateMonitor1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.laerdal.deviceconnection;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "multipeertest/multipeertest-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -479,13 +479,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7M6UAB95WX;
+				DEVELOPMENT_TEAM = 59H894L2Q3;
 				INFOPLIST_FILE = multipeertest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.andrew.HeartRateMonitor1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.laerdal.deviceconnection;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "multipeertest/multipeertest-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

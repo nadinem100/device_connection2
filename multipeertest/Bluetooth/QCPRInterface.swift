@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 public protocol QCPRCompressionDelegate: class {
-    func compressionUpdated(comp_dep: Int, comp_rate: Int)
+    func compressionUpdated(uuid: String?, comp_dep: Int, comp_rate: Int)
 }
 
 public protocol QCPRInterfaceDelegate: class {
@@ -69,7 +69,7 @@ public class QCPRInterface: NSObject {
     }
     
     public func receivedCompressionEvent(a:Int, b:Int){
-        compressionDelegate?.compressionUpdated(comp_dep: a, comp_rate: b)
+        compressionDelegate?.compressionUpdated(uuid: "empty", comp_dep: a, comp_rate: b)
     }
 }
 
