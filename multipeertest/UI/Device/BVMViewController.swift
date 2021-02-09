@@ -26,13 +26,14 @@ class BVMViewController: UIViewController {
     override func viewWillDisappear(_ animated : Bool) {
         
         print("\(title!) deloaded")
-        service.signal()
-
+        
     }
     
     @IBAction func signal(_ sender: Any) {
         
         print("Signal")
+        service.signal()
+
         
     }
 

@@ -155,6 +155,10 @@ class QCPRDeviceView: UIViewController, UIAdaptivePresentationControllerDelegate
 //            delegate?.requestDisconnect(device: device)
         } else {
             delegate?.requestConnect(device: device)
+            if let cell = tableView.cellForRow(at: indexPath) {
+                    cell.accessoryType = .checkmark
+
+                }
         }
     }
     

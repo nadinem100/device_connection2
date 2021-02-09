@@ -25,6 +25,10 @@ class ManagerViewController: UIViewController, UITableViewDelegate{
     @IBOutlet weak var comprate_1: UILabel!
     @IBOutlet weak var comprate_2: UILabel!
     
+    @IBOutlet weak var sendingTruM: UILabel!
+    @IBOutlet weak var sendingTruM2: UILabel!
+    @IBOutlet weak var simulator_device: UILabel!
+    @IBOutlet weak var sim_dev_2: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +37,7 @@ class ManagerViewController: UIViewController, UITableViewDelegate{
         qcprInterface_2.startBLE()
         qcprInterface.bleCore.compressionDelegate = self
         qcprInterface_2.bleCore.compressionDelegate = self
+        service.hostDelegate = self
         // Do any additional setup after loading the view.
     }
     
@@ -79,7 +84,13 @@ class ManagerViewController: UIViewController, UITableViewDelegate{
     
     @IBAction func didSelectButt_DF(_ sender: Any) {
         showDevicesList()
-        let filtered_devices = service.discoveredDevices.filter { $0.deviceName == "Drugs and Fluids" }
+        let filtered_devices = service.discoveredDevices.filter { $0.deviceName == "Drugs" }
+        deviceView?.update(devices: filtered_devices)
+    }
+    
+    @IBAction func didSelectButt_Fl(_ sender: Any) {
+        showDevicesList()
+        let filtered_devices = service.discoveredDevices.filter { $0.deviceName == "Fluids" }
         deviceView?.update(devices: filtered_devices)
     }
     
@@ -105,6 +116,14 @@ class ManagerViewController: UIViewController, UITableViewDelegate{
     
 }
 
+extension ManagerViewController: HostDelegate {
+    func signalUpdated(peerID: MCPeerID?, data: String?) {
+        print("getting to signal updated");
+        simulator_device.text = data ?? "null";
+        sim_dev_2.text =  "Received from: " + String(peerID?.displayName ?? "null");
+    }
+}
+
 extension ManagerViewController: QCPRCompressionDelegate {
     
     func compressionUpdated(uuid: String?, comp_dep: Int, comp_rate: Int) {
@@ -113,11 +132,13 @@ extension ManagerViewController: QCPRCompressionDelegate {
         if (String((qcprInterface_2.bleCore.connectedDevice()?.uuid) ?? "None") == String(uuid!)){
             lbl_device2.text = "Compression Depth: " + String(comp_dep);
             comprate_2.text = "Compression Rate: " + String(comp_rate);
+            sendingTruM2.text = "Sending Compression Rate: " + String(comp_rate) + " to TruMonitor.";
         }
         
         if (String((qcprInterface.bleCore.connectedDevice()?.uuid) ?? "None") == String(uuid!)){
             lbl_device1.text = "Compression Depth: " + String(comp_dep);
             comprate_1.text = "Compression Rate: \( String(comp_rate))";
+            sendingTruM.text = "Sending Compression Rate: " + String(comp_rate) + " to TruMonitor.";
         }
         
     

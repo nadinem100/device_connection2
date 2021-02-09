@@ -9,6 +9,10 @@ import Foundation
 import MultipeerConnectivity
 import UIKit
 
+public protocol HostDelegate: class {
+    func signalUpdated(peerID: MCPeerID?, data: String?)
+}
+
 class HostService: NSObject {
     
     var session: MCSession!
@@ -19,7 +23,8 @@ class HostService: NSObject {
     var myPeerID = MCPeerID(displayName: "host")
     var service = "trumonitor-ctrl"
     //dictionary of mcpeerid --> phone id's?
-    
+    public weak var hostDelegate: HostDelegate?
+
     override init() {
         
         super.init()
@@ -153,6 +158,7 @@ extension HostService: MCSessionDelegate {
         print("Recieved from \(peerID)")
         
         print(String(decoding: data, as: UTF8.self))
+        hostDelegate?.signalUpdated(peerID: peerID, data: String(decoding: data, as: UTF8.self))
         
     }
     
