@@ -32,15 +32,10 @@ class AdvertisingService: NSObject {
         advertiser.delegate = self
         
         print("\(type) instantiated")
-        start()
-    }
-    
-    func start() {
-        
         advertiser.startAdvertisingPeer()
-        
     }
     
+    // Method for testing connection by sending a string "Signal"
     func signal() {
         
         let data = "Signal".data(using: .utf8)
@@ -76,6 +71,7 @@ class AdvertisingService: NSObject {
 
 extension AdvertisingService: MCNearbyServiceAdvertiserDelegate {
     
+    // calls this method when host calls .invitePeer
     func advertiser(_ advertiser: MCNearbyServiceAdvertiser, didReceiveInvitationFromPeer peerID: MCPeerID, withContext context: Data?, invitationHandler: @escaping (Bool, MCSession?) -> Void) {
     
         print("\(peerID) invitation recieved")
@@ -87,6 +83,7 @@ extension AdvertisingService: MCNearbyServiceAdvertiserDelegate {
 
 extension AdvertisingService: MCSessionDelegate {
     
+    // Connection with host
     func session(_ session: MCSession, peer peerID: MCPeerID, didChange state: MCSessionState) {
         
         switch state {
@@ -107,6 +104,8 @@ extension AdvertisingService: MCSessionDelegate {
         
     }
     
+    // method for security that requires a certificate to connect.
+    // This is currently unused and the guest will always connect to a host if it can
     func session(_ session: MCSession, didReceiveCertificate certificate: [Any]?, fromPeer peerID: MCPeerID, certificateHandler: @escaping (Bool) -> Void) {
         certificateHandler(true)
     }

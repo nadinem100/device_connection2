@@ -15,13 +15,25 @@ public protocol HostDelegate: class {
 
 class HostService: NSObject {
     
+    // Instance variables. ! means they do not need to be defined at constructor
+    
+    // Both host and guest need a mcsession to manage sending and recieving data
     var session: MCSession!
+    
+    // browser to look for guest devices
     var browser: MCNearbyServiceBrowser!
+    
     var discoveredDevices: [BLEDevice] = []
     var connectedDevices: [MCPeerID] = []
+    
+    // different array to differentiate between our own simulated devices and trumonitor tablets
     var truMonitorDevices: [MCPeerID] = []
+    
     var myPeerID = MCPeerID(displayName: "host")
+    
+    // this is the service name that is needed to establish connected to trumonitor. Note that in info.plst file we added a permissions request to use this domain name. (under bonjour services)
     var service = "trumonitor-ctrl"
+    
     //dictionary of mcpeerid --> phone id's?
     public weak var hostDelegate: HostDelegate?
 
@@ -31,20 +43,16 @@ class HostService: NSObject {
         session = MCSession(peer: myPeerID, securityIdentity: nil, encryptionPreference: .optional)
         browser = MCNearbyServiceBrowser(peer: myPeerID, serviceType: service)
         
+        // MCSession and MCServiceBrowser have delegates that contain methods that
+        // are called automatically to handle events. This class extends these
+        // delegate classes, so we set the delegate to self
         session.delegate = self
         browser.delegate = self
         
         print("Host instantiated")
-        start()
-        
-    }
-    
-    func start() {
-        
         browser.startBrowsingForPeers()
         
     }
-    
     
     func sendDataToTruMonitor(request: ControlRequest, peers: [MCPeerID]) {
 
@@ -62,7 +70,6 @@ class HostService: NSObject {
      }
 
      
-
      private func controlRequestData(request: ControlRequest) -> Data? {
 
          let jsonEncoder = JSONEncoder()
@@ -87,7 +94,7 @@ class HostService: NSObject {
     
 }
 
-
+// Event handlers for MCNearbyServiceBrowser
 extension HostService: MCNearbyServiceBrowserDelegate {
     
     func browser(_ browser: MCNearbyServiceBrowser, foundPeer peerID: MCPeerID, withDiscoveryInfo info: [String : String]?) {
@@ -99,7 +106,9 @@ extension HostService: MCNearbyServiceBrowserDelegate {
             return
         }
         discoveredDevices.append(BLEDevice(uuid: "\(device_name) : \(device_id) ", deviceName: peerID.displayName, peerID: peerID))
-//        browser.invitePeer(peerID, to: session, withContext: nil, timeout: 30) //can we just add to discovered/connected devices, and then invite once they select it?
+        
+        // Invite guest to our session, this calls didChange in MCSession delegate
+        browser.invitePeer(peerID, to: session, withContext: nil, timeout: 30)
         
     }
     
@@ -128,6 +137,7 @@ extension HostService: MCNearbyServiceBrowserDelegate {
 
 extension HostService: MCSessionDelegate {
     
+    // Called upon making connection
     func session(_ session: MCSession, peer peerID: MCPeerID, didChange state: MCSessionState) {
         
         switch state {
@@ -140,6 +150,8 @@ extension HostService: MCSessionDelegate {
         case .connected:
             print("-- \(peerID) Connected -- ")
             connectedDevices.append(peerID)
+            
+            // sorting into proper device
             if (peerID.displayName != "Stethoscope" && peerID.displayName != "BVM" && peerID.displayName != "Drugs" && peerID.displayName != "Bedside Monitor" && peerID.displayName != "Monitor Box" &&
                 peerID.displayName != "Fluids"){
                 
@@ -162,6 +174,10 @@ extension HostService: MCSessionDelegate {
         
     }
     
+    
+    // Other event handling methods that needed to be implemented
+    // but are not used
+    
     func session(_ session: MCSession, didReceive stream: InputStream, withName streamName: String, fromPeer peerID: MCPeerID) {
         
         print("Recieving stream")
@@ -182,6 +198,8 @@ extension HostService: MCSessionDelegate {
     
     
 }
+
+// Delegate used for bringing variables to certain scopes. This is for UI
 extension HostService: QCPRDeviceViewDelegate {
 
     func requestConnect(device: BLEDevice) {
