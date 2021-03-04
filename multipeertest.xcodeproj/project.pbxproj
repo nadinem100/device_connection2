@@ -33,6 +33,7 @@
 		EB482D1E25BB6436009120A2 /* BLEDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB482D1D25BB6436009120A2 /* BLEDefinitions.swift */; };
 		EB482D2125BB6524009120A2 /* CompressionCompleteEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB482D2025BB6524009120A2 /* CompressionCompleteEvent.swift */; };
 		EB482D2625BB65B2009120A2 /* QCPRServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB482D2525BB65B2009120A2 /* QCPRServices.swift */; };
+		EB84E23725F0A02A00EE4469 /* ContextShot.png in Resources */ = {isa = PBXBuildFile; fileRef = EB84E23625F0A02A00EE4469 /* ContextShot.png */; };
 		F6770F1F25C083BF0013E394 /* IV Bolus.png in Resources */ = {isa = PBXBuildFile; fileRef = F6770F1B25C083BE0013E394 /* IV Bolus.png */; };
 		F6770F2025C083BF0013E394 /* Radio button off.png in Resources */ = {isa = PBXBuildFile; fileRef = F6770F1C25C083BE0013E394 /* Radio button off.png */; };
 		F6770F2125C083BF0013E394 /* Radio button on.png in Resources */ = {isa = PBXBuildFile; fileRef = F6770F1D25C083BE0013E394 /* Radio button on.png */; };
@@ -71,6 +72,7 @@
 		EB482D1D25BB6436009120A2 /* BLEDefinitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEDefinitions.swift; sourceTree = "<group>"; };
 		EB482D2025BB6524009120A2 /* CompressionCompleteEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompressionCompleteEvent.swift; sourceTree = "<group>"; };
 		EB482D2525BB65B2009120A2 /* QCPRServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QCPRServices.swift; sourceTree = "<group>"; };
+		EB84E23625F0A02A00EE4469 /* ContextShot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ContextShot.png; sourceTree = "<group>"; };
 		F6770F1B25C083BE0013E394 /* IV Bolus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IV Bolus.png"; sourceTree = "<group>"; };
 		F6770F1C25C083BE0013E394 /* Radio button off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Radio button off.png"; sourceTree = "<group>"; };
 		F6770F1D25C083BE0013E394 /* Radio button on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Radio button on.png"; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 		12AC105D25BA33C500DBB38B /* Device */ = {
 			isa = PBXGroup;
 			children = (
+				EB84E23625F0A02A00EE4469 /* ContextShot.png */,
 				127F8E4225CC6D6300B87F09 /* Drugs and Fluids */,
 				12AC104E25BA274E00DBB38B /* SimulatorViewController.swift */,
 				12AF040B25B9DC3A00DEC006 /* StethViewController.swift */,
@@ -269,6 +272,7 @@
 				F6770F1F25C083BF0013E394 /* IV Bolus.png in Resources */,
 				F6770F2B25C087BB0013E394 /* AdministerGray.png in Resources */,
 				795AC93C25B6D68600DB3B6F /* LaunchScreen.storyboard in Resources */,
+				EB84E23725F0A02A00EE4469 /* ContextShot.png in Resources */,
 				EB482D0625BA795A009120A2 /* QCPRDeviceView.storyboard in Resources */,
 				F6770F2C25C087BB0013E394 /* AdministerBlue.png in Resources */,
 				F6770F2025C083BF0013E394 /* Radio button off.png in Resources */,
