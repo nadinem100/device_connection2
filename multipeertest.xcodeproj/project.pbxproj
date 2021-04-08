@@ -26,6 +26,7 @@
 		795AC93925B6D68600DB3B6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 795AC93825B6D68600DB3B6F /* Assets.xcassets */; };
 		795AC93C25B6D68600DB3B6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 795AC93A25B6D68600DB3B6F /* LaunchScreen.storyboard */; };
 		795AC94625B6D6B000DB3B6F /* MultipeerDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795AC94525B6D6B000DB3B6F /* MultipeerDataService.swift */; };
+		EB2EF911261F49F2006A34E0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2EF910261F49F2006A34E0 /* ContentView.swift */; };
 		EB482D0625BA795A009120A2 /* QCPRDeviceView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB482D0525BA795A009120A2 /* QCPRDeviceView.storyboard */; };
 		EB482D0925BA7A1E009120A2 /* QCPRDeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB482D0825BA7A1E009120A2 /* QCPRDeviceView.swift */; };
 		EB482D1825BB62FE009120A2 /* QCPRInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB482D1725BB62FE009120A2 /* QCPRInterface.swift */; };
@@ -65,6 +66,7 @@
 		795AC93B25B6D68600DB3B6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		795AC93D25B6D68600DB3B6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		795AC94525B6D6B000DB3B6F /* MultipeerDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipeerDataService.swift; sourceTree = "<group>"; };
+		EB2EF910261F49F2006A34E0 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EB482D0525BA795A009120A2 /* QCPRDeviceView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QCPRDeviceView.storyboard; sourceTree = "<group>"; };
 		EB482D0825BA7A1E009120A2 /* QCPRDeviceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QCPRDeviceView.swift; sourceTree = "<group>"; };
 		EB482D1725BB62FE009120A2 /* QCPRInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QCPRInterface.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 		12AF040725B9DBB200DEC006 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				EB2EF910261F49F2006A34E0 /* ContentView.swift */,
 				12AC105D25BA33C500DBB38B /* Device */,
 				12AF040825B9DBD100DEC006 /* MainViewController.swift */,
 				12AF041125B9E2F000DEC006 /* ManagerViewController.swift */,
@@ -292,6 +295,7 @@
 			files = (
 				795AC93425B6D68500DB3B6F /* ViewController.swift in Sources */,
 				12AC105B25BA29DC00DBB38B /* MonitorViewController.swift in Sources */,
+				EB2EF911261F49F2006A34E0 /* ContentView.swift in Sources */,
 				795AC93025B6D68500DB3B6F /* AppDelegate.swift in Sources */,
 				127F8E4825CC6D7800B87F09 /* FluidsViewController.swift in Sources */,
 				795AC93225B6D68500DB3B6F /* SceneDelegate.swift in Sources */,
