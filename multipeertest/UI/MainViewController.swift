@@ -143,9 +143,37 @@ class MainViewController: UIViewController {
 
         view4.topAnchor.constraint(equalTo: parent3.topAnchor, constant: 42).isActive = true
 
+        
+        //Buttons
+        var view5 = UILabel()
+
+        view5.frame = CGRect(x: 0, y: 0, width: 360, height: 80)
+
+        view5.backgroundColor = .orange
+
+
+        view5.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1).cgColor
+
+        view5.layer.cornerRadius = 4
+
+        view5.layer.borderWidth = 1
+
+        view5.layer.borderColor = UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 1).cgColor
+
+        parent.addSubview(view5)
+
+        view5.translatesAutoresizingMaskIntoConstraints = false
+
+        view5.heightAnchor.constraint(equalToConstant: 80).isActive = true
+
+        view5.topAnchor.constraint(equalTo: parent3.bottomAnchor, constant: 462).isActive = true
+
+
 
 
     }
+    
+    @IBOutlet weak var simulator_button: UIButton!
     
     override func viewWillAppear(_ animated: Bool) {
         

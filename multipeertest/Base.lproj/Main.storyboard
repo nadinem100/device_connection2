@@ -19,6 +19,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xUG-Lv-3t0">
                                 <rect key="frame" x="118" y="589" width="172" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="manager_button"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="42"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Manager">
@@ -32,6 +33,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7e8-Fi-8dc">
                                 <rect key="frame" x="110" y="541" width="188" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="simm_button" label="sim_button"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="42"/>
                                 <state key="normal" title="Simulator">
                                     <color key="titleColor" systemColor="systemOrangeColor"/>
@@ -44,6 +46,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="fPd-rp-UmJ"/>
+                    <connections>
+                        <outlet property="simulator_button" destination="7e8-Fi-8dc" id="jkJ-eG-nsF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -26,6 +26,8 @@
 		795AC93925B6D68600DB3B6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 795AC93825B6D68600DB3B6F /* Assets.xcassets */; };
 		795AC93C25B6D68600DB3B6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 795AC93A25B6D68600DB3B6F /* LaunchScreen.storyboard */; };
 		795AC94625B6D6B000DB3B6F /* MultipeerDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795AC94525B6D6B000DB3B6F /* MultipeerDataService.swift */; };
+		EB2EF914261F4A51006A34E0 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2EF913261F4A51006A34E0 /* SwiftUIView.swift */; };
+		EB2EF917261F6261006A34E0 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2EF916261F6261006A34E0 /* HomeScreen.swift */; };
 		EB482D0625BA795A009120A2 /* QCPRDeviceView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB482D0525BA795A009120A2 /* QCPRDeviceView.storyboard */; };
 		EB482D0925BA7A1E009120A2 /* QCPRDeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB482D0825BA7A1E009120A2 /* QCPRDeviceView.swift */; };
 		EB482D1825BB62FE009120A2 /* QCPRInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB482D1725BB62FE009120A2 /* QCPRInterface.swift */; };
@@ -65,6 +67,8 @@
 		795AC93B25B6D68600DB3B6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		795AC93D25B6D68600DB3B6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		795AC94525B6D6B000DB3B6F /* MultipeerDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipeerDataService.swift; sourceTree = "<group>"; };
+		EB2EF913261F4A51006A34E0 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		EB2EF916261F6261006A34E0 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		EB482D0525BA795A009120A2 /* QCPRDeviceView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QCPRDeviceView.storyboard; sourceTree = "<group>"; };
 		EB482D0825BA7A1E009120A2 /* QCPRDeviceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QCPRDeviceView.swift; sourceTree = "<group>"; };
 		EB482D1725BB62FE009120A2 /* QCPRInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QCPRInterface.swift; sourceTree = "<group>"; };
@@ -127,6 +131,8 @@
 				12AF041125B9E2F000DEC006 /* ManagerViewController.swift */,
 				EB482D0525BA795A009120A2 /* QCPRDeviceView.storyboard */,
 				EB482D0825BA7A1E009120A2 /* QCPRDeviceView.swift */,
+				EB2EF913261F4A51006A34E0 /* SwiftUIView.swift */,
+				EB2EF916261F6261006A34E0 /* HomeScreen.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -292,6 +298,7 @@
 			files = (
 				795AC93425B6D68500DB3B6F /* ViewController.swift in Sources */,
 				12AC105B25BA29DC00DBB38B /* MonitorViewController.swift in Sources */,
+				EB2EF914261F4A51006A34E0 /* SwiftUIView.swift in Sources */,
 				795AC93025B6D68500DB3B6F /* AppDelegate.swift in Sources */,
 				127F8E4825CC6D7800B87F09 /* FluidsViewController.swift in Sources */,
 				795AC93225B6D68500DB3B6F /* SceneDelegate.swift in Sources */,
@@ -300,6 +307,7 @@
 				127F8E4425CC6D7100B87F09 /* DrugsViewController.swift in Sources */,
 				12AC106325BA343800DBB38B /* MultipeerGuest.swift in Sources */,
 				EB482D1825BB62FE009120A2 /* QCPRInterface.swift in Sources */,
+				EB2EF917261F6261006A34E0 /* HomeScreen.swift in Sources */,
 				12AC105F25BA340000DBB38B /* MultipeerHost.swift in Sources */,
 				795AC94625B6D6B000DB3B6F /* MultipeerDataService.swift in Sources */,
 				12AF040925B9DBD100DEC006 /* MainViewController.swift in Sources */,
